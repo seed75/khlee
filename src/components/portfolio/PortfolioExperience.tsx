@@ -240,13 +240,21 @@ function Hero() {
 }
 
 function ProofStrip() {
+  const statTrack = [...heroStats, ...heroStats];
+
   return (
-    <section className="border-y border-white/10 bg-[#0b0d13]">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-white/10 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
-        {heroStats.map((stat) => (
-          <div key={stat.label} className="bg-[#0b0d13] py-6">
-            <p className="font-mono text-3xl font-black text-white">{stat.value}</p>
-            <p className="mt-1 text-sm text-white/58">{stat.label}</p>
+    <section className="proof-strip border-y border-white/10 bg-[#0b0d13]">
+      <div className="proof-track proof-track-left">
+        {statTrack.map((stat, index) => (
+          <div
+            key={`${stat.label}-${index}`}
+            className="proof-stat min-w-[17rem] border-r border-white/10 bg-[#0b0d13] px-6 py-6 sm:min-w-[22rem]"
+            aria-hidden={index >= heroStats.length}
+          >
+            <p className="font-mono text-3xl font-black text-white sm:text-4xl">
+              {stat.value}
+            </p>
+            <p className="mt-1 text-sm text-white/58 sm:text-base">{stat.label}</p>
           </div>
         ))}
       </div>

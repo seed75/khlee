@@ -105,6 +105,44 @@ button {
   clip-path: polygon(0 0, 96% 0, 100% 7%, 100% 100%, 4% 100%, 0 93%);
 }
 
+.proof-strip {
+  position: relative;
+  overflow: hidden;
+}
+
+.proof-strip::before,
+.proof-strip::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: min(10vw, 8rem);
+}
+
+.proof-strip::before {
+  left: 0;
+  background: linear-gradient(90deg, #0b0d13, rgba(11, 13, 19, 0));
+}
+
+.proof-strip::after {
+  right: 0;
+  background: linear-gradient(270deg, #0b0d13, rgba(11, 13, 19, 0));
+}
+
+.proof-track {
+  display: flex;
+  width: max-content;
+  background: rgba(255, 255, 255, 0.1);
+  animation: proof-slide-x 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.proof-strip:hover .proof-track {
+  animation-play-state: paused;
+}
+
 @keyframes data-rain {
   from {
     transform: translateX(-12%);
@@ -120,5 +158,26 @@ button {
   }
   to {
     transform: translateY(40px);
+  }
+}
+
+@keyframes proof-slide-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proof-track {
+    animation: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .proof-stat {
+    scroll-snap-align: start;
   }
 }
