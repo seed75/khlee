@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kanghyeok Lee Portfolio
+
+A job-focused personal portfolio for junior frontend, full-stack, and AI developer roles in Australia.
+
+The site is designed to give recruiters and engineering teams a fast read on my strengths: expressive frontend implementation, practical product thinking, AI-ready workflows, and clean project storytelling.
+
+## Highlights
+
+- Dynamic personal portfolio built with Next.js 16, React 19, TypeScript, Tailwind CSS, and Motion.
+- Selected project case studies written around challenge, contribution, and outcome.
+- Printable resume route at `/resume`.
+- Embedded Remotion reel using Player, Renderer, Transitions, Motion Blur, Lottie, and Three.js.
+- Responsive, high-energy visual design with verified production build.
+
+## Selected Projects
+
+### Subscription Cost Manager
+
+A personal finance MVP concept for tracking subscriptions, recurring bills, free trials, cancellation notes, and potential savings.
+
+My focus:
+
+- Narrowed the product from a broad finance app into a focused subscription-management MVP.
+- Defined target users, first-screen information, free/paid plan logic, validation questions, and core data structure.
+- Planned a build path that avoids over-scoping sensitive financial integrations too early.
+
+### AI Interview Portfolio
+
+This portfolio itself: a hiring surface for Australian junior frontend, full-stack, and AI developer applications.
+
+My focus:
+
+- Built a reusable project data model that powers the homepage, resume page, and Remotion reel.
+- Designed a bold responsive interface that avoids the usual static portfolio template feel.
+- Verified the app with linting and production build checks.
+
+### Remotion Portfolio Reel
+
+A short React-based motion reel that turns project data into video-style portfolio content.
+
+My focus:
+
+- Used Remotion composition patterns with transitions, Lottie, motion blur, and Three.js visuals.
+- Kept website and reel content synced through the same portfolio data source.
+- Added CLI scripts for video rendering and still-frame export.
+
+## Tech Stack
+
+- Frontend: Next.js 16, React 19, TypeScript, Tailwind CSS, Motion, lucide-react
+- Video: Remotion, Remotion Player, Renderer, Transitions, Motion Blur, Lottie, Three.js
+- Quality: ESLint, TypeScript, Playwright checks, production build verification
+- Product direction: junior frontend, full-stack fundamentals, AI-assisted workflows
 
 ## Getting Started
 
-First, run the development server:
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
+npm run remotion:studio
+npm run remotion:render
+npm run remotion:still
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+src/app/                  Next.js App Router pages
+src/app/resume/           Printable resume route
+src/components/portfolio/ Interactive portfolio UI
+src/lib/portfolio-data.ts Shared profile, skills, and project data
+src/remotion/             Remotion composition and video assets
+public/images/            Generated visuals and preview images
+scripts/                  Rendering helpers
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Role Fit
 
-## Learn More
+I am positioning this portfolio for:
 
-To learn more about Next.js, take a look at the following resources:
+- Junior Frontend Developer roles
+- Junior Full-stack Developer roles
+- AI Developer or AI Product Builder roles
+- Product-focused teams that value clear UI, fast learning, and thoughtful execution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Next Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Replace placeholder LinkedIn and email with final public contact details.
+- Add live deployment URL after Vercel deployment.
+- Add real project screenshots or short demo videos for each case study.
+- Add Lighthouse report results after deployment.
+- Expand the Subscription Cost Manager concept into a working MVP.

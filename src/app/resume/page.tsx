@@ -5,7 +5,8 @@ import { PrintButton } from "./PrintButton";
 
 export const metadata = {
   title: "Resume | Kanghyeok Lee",
-  description: "Resume page for Kanghyeok Lee, frontend and full-stack developer.",
+  description:
+    "Resume page for Kanghyeok Lee, a junior frontend, full-stack, and AI developer targeting roles in Australia.",
 };
 
 export default function ResumePage() {

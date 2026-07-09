@@ -153,11 +153,11 @@ function Hero() {
         >
           <div className="mb-5 inline-flex items-center gap-2 border border-lime-300/50 bg-black/42 px-3 py-2 text-sm font-semibold text-lime-200 backdrop-blur">
             <Radio size={16} />
-            OPEN TO FRONTEND / FULL-STACK ROLES
+            OPEN TO JUNIOR FRONTEND / FULL-STACK / AI ROLES
           </div>
           <h1 className="max-w-5xl text-5xl font-black leading-[0.96] text-white sm:text-6xl md:text-7xl lg:text-8xl">
             {profile.name}.
-            <span className="block text-lime-300">Frontend Developer.</span>
+            <span className="block text-lime-300">Frontend + AI Developer.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/76 sm:text-xl">
             {profile.headline} {profile.intro}
@@ -168,21 +168,21 @@ function Hero() {
               className="inline-flex h-12 items-center justify-center gap-2 border border-lime-300 bg-lime-300 px-5 text-sm font-black text-black transition hover:border-white hover:bg-white"
             >
               <MousePointer2 size={18} />
-              프로젝트 보기
+              View Projects
             </a>
             <a
               href="/resume"
               className="inline-flex h-12 items-center justify-center gap-2 border border-white/18 bg-white/8 px-5 text-sm font-bold text-white backdrop-blur transition hover:border-coral hover:bg-coral hover:text-black"
             >
               <Download size={18} />
-              이력서 보기
+              View Resume
             </a>
             <a
               href={`mailto:${profile.email}`}
               className="inline-flex h-12 items-center justify-center gap-2 border border-white/18 px-5 text-sm font-bold text-white/80 transition hover:border-cobalt hover:text-white"
             >
               <Mail size={18} />
-              이메일 보내기
+              Email Me
             </a>
           </div>
         </motion.div>
@@ -278,10 +278,11 @@ function Projects({
             CASE STUDIES
           </div>
           <h2 className="max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
-            채용자가 확인해야 할 Selected Projects.
+            Selected projects for junior developer hiring.
           </h2>
           <p className="mt-5 text-base leading-7 text-white/64">
-            프로젝트는 예쁜 썸네일보다 `내가 무엇을 맡았고`, `어떤 결정을 했고`, `어떤 결과를 냈는지`가 먼저 보이게 구성했습니다.
+            Each case study is structured around ownership: the problem, my contribution,
+            the technical decisions, and the outcome a hiring team can evaluate quickly.
           </p>
         </div>
 
@@ -404,10 +405,11 @@ function ReelSection() {
             REMOTION REEL
           </div>
           <h2 className="max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
-            짧은 시간 안에 강점을 보여주는 프로젝트 쇼릴.
+            A short motion reel for fast recruiter scanning.
           </h2>
           <p className="mt-5 text-base leading-7 text-white/68">
-            채용 담당자가 긴 설명을 읽기 전에도 프로젝트와 기술 감각을 빠르게 확인할 수 있도록 Remotion 기반 쇼릴을 넣었습니다.
+            The Remotion reel gives recruiters a quick read on my project range, animation
+            taste, and ability to turn React components into video-ready content.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-3">
             {["Player", "Renderer", "Transitions"].map((item) => (
@@ -445,11 +447,12 @@ function SkillsSection() {
               SKILLS
             </div>
             <h2 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
-              취업 포트폴리오에서 바로 보여야 하는 강점.
+              Strengths that matter in a junior developer portfolio.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-white/60">
-            기술 목록만 나열하지 않고, 실제 업무에서 어떤 방식으로 기여할 수 있는지 중심으로 정리했습니다.
+            The skills are framed around how I can contribute on a team, not just the
+            names of tools I have used.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -488,7 +491,7 @@ function StackSection() {
             STACK
           </div>
           <h2 className="text-4xl font-black leading-tight text-white sm:text-5xl">
-            실무에 바로 연결되는 기술 스택.
+            A stack built for frontend, full-stack, and AI product work.
           </h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -525,7 +528,7 @@ function ExperienceSection() {
               EXPERIENCE
             </div>
             <h2 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
-              면접에서 설명 가능한 성장 흐름.
+              A clear growth story for interviews.
             </h2>
           </div>
         </div>
@@ -554,7 +557,7 @@ function ContactSection() {
         <div>
           <p className="mb-4 text-sm font-black text-cobalt">CONTACT</p>
           <h2 className="max-w-4xl text-4xl font-black leading-tight sm:text-6xl">
-            Frontend / Full-stack 포지션으로 이야기 나눌 준비가 되어 있습니다.
+            Ready to talk about junior frontend, full-stack, and AI developer roles in Australia.
           </h2>
         </div>
         <div className="grid content-end gap-3">

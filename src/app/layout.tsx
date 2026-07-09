@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kanghyeok.dev"),
-  title: "Kanghyeok Lee | Frontend Developer Portfolio",
+  metadataBase: new URL("https://github.com/seed75/khlee"),
+  title: "Kanghyeok Lee | Junior Frontend, Full-stack & AI Developer",
   description:
-    "A job-focused personal portfolio for frontend and full-stack roles, with selected projects, skills, resume, and contact information.",
+    "Australia-focused personal portfolio for junior frontend, full-stack, and AI developer roles, with selected projects, skills, resume, and Remotion reel.",
   openGraph: {
-    title: "Kanghyeok Lee | Frontend Developer Portfolio",
+    title: "Kanghyeok Lee | Junior Frontend, Full-stack & AI Developer",
     description:
-      "Selected projects, skills, resume, and hire-ready frontend engineering evidence.",
+      "Selected projects, skills, resume, and hire-ready frontend, full-stack, and AI development evidence.",
     images: ["/images/portfolio-command-center.png"],
   },
 };
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ko"
+      lang="en-AU"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
