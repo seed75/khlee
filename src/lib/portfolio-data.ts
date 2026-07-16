@@ -32,9 +32,9 @@ export const profile = {
   name: "Kanghyeok Lee",
   role: "Junior Frontend / Full-stack / AI Developer",
   headline:
-    "Australia-based junior developer focused on sharp frontend craft, practical full-stack delivery, and AI-assisted product workflows.",
+    "I build things that stop money and bugs from quietly leaking out.",
   intro:
-    "I build expressive, responsive interfaces with React and Next.js, then connect them to clean data models, testing habits, and deployment-ready code.",
+    "React and Next.js by day, obsessive bug-hunter by night. I shipped an app called Leakly to stop subscription leaks; turns out I'm just as allergic to leaky code.",
   email: "ed75hyeok@gmail.com",
   github: "https://github.com/seed75/khlee",
   linkedin: "https://www.linkedin.com/in/kanghyeoklee62/",
