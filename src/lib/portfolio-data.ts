@@ -36,7 +36,8 @@ export const profile = {
   intro:
     "React and Next.js by day, obsessive bug-hunter by night. I shipped an app called Leakly to stop subscription leaks; turns out I'm just as allergic to leaky code.",
   email: "ed75hyeok@gmail.com",
-  github: "https://github.com/seed75/khlee",
+  github: "https://github.com/seed75",
+  siteUrl: "https://khlee-dusky.vercel.app",
   linkedin: "https://www.linkedin.com/in/kanghyeoklee62/",
   location: "Sydney, Australia",
   availability: "Open to junior frontend, full-stack, and AI developer roles",

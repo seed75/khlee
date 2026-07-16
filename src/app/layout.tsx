@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://github.com/seed75/khlee"),
+  metadataBase: new URL("https://github.com/seed75"),
   title: "Kanghyeok Lee | Junior Frontend, Full-stack & AI Developer",
   description:
     "Australia-focused personal portfolio for junior frontend, full-stack, and AI developer roles, with selected projects, skills, resume, and Remotion reel.",

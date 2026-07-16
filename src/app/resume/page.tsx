@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GitBranch, Mail, MapPin } from "lucide-react";
+import { GitBranch, Globe, Mail, MapPin } from "lucide-react";
 import { profile, projects, stackGroups, timeline } from "@/lib/portfolio-data";
 import { PrintButton } from "./PrintButton";
 
@@ -33,14 +33,31 @@ export default function ResumePage() {
               {profile.headline} {profile.intro}
             </p>
             <div className="mt-5 flex flex-wrap gap-3 text-sm font-bold">
-              <span className="inline-flex items-center gap-2 border border-black px-3 py-2">
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 border border-black px-3 py-2 transition hover:bg-black hover:text-white"
+              >
                 <Mail size={15} />
                 {profile.email}
-              </span>
-              <span className="inline-flex items-center gap-2 border border-black px-3 py-2">
+              </a>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-black px-3 py-2 transition hover:bg-black hover:text-white"
+              >
                 <GitBranch size={15} />
                 {profile.github.replace("https://", "")}
-              </span>
+              </a>
+              <a
+                href={profile.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-black px-3 py-2 transition hover:bg-black hover:text-white"
+              >
+                <Globe size={15} />
+                Portfolio
+              </a>
               <span className="inline-flex items-center gap-2 border border-black px-3 py-2">
                 <MapPin size={15} />
                 {profile.location}
