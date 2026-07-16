@@ -342,9 +342,22 @@ function Projects({
           >
             <div className="grid gap-6 lg:grid-cols-[1fr_0.74fr]">
               <div>
-                <p className="font-mono text-sm font-bold text-lime-300">
-                  {selectedProject.role}
-                </p>
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <p className="font-mono text-sm font-bold text-lime-300">
+                    {selectedProject.role}
+                  </p>
+                  {selectedProject.liveUrl && (
+                    <a
+                      href={selectedProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 border border-white/14 bg-white/[0.05] px-3 py-1.5 text-xs font-bold text-white/78 transition hover:border-white/30 hover:text-white"
+                    >
+                      View Live
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
+                </div>
                 <h3 className="mt-3 text-3xl font-black text-white">
                   {selectedProject.impact}
                 </h3>

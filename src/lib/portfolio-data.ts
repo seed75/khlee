@@ -12,6 +12,7 @@ export type Project = {
   metrics: string[];
   accent: string;
   secondaryAccent: string;
+  liveUrl?: string;
 };
 
 export type LabItem = {
@@ -72,6 +73,7 @@ export const projects: Project[] = [
     metrics: ["4 core screens", "EN / KO i18n", "PWA + iOS wrapper"],
     accent: "#B9F227",
     secondaryAccent: "#2F6BFF",
+    liveUrl: "https://leakly-inky.vercel.app",
   },
   {
     id: "tailorcv",
@@ -92,6 +94,7 @@ export const projects: Project[] = [
     metrics: ["2 independent flows", "PDF + DOCX I/O", "AI rewrite in ~10s"],
     accent: "#FF6B57",
     secondaryAccent: "#FF4FD8",
+    liveUrl: "https://rez-rush.vercel.app",
   },
   {
     id: "job-application-tracker",
@@ -112,6 +115,7 @@ export const projects: Project[] = [
     metrics: ["Layered API architecture", "JWT + bcrypt auth", "Playwright E2E coverage"],
     accent: "#2F6BFF",
     secondaryAccent: "#B9F227",
+    liveUrl: "https://job-apptracker.vercel.app",
   },
   {
     id: "even-and-mark",
@@ -132,6 +136,7 @@ export const projects: Project[] = [
     metrics: ["Zero dependencies", "prefers-reduced-motion support", "Custom split-flap clock"],
     accent: "#FFC145",
     secondaryAccent: "#2F6BFF",
+    liveUrl: "https://mark-even.vercel.app",
   },
 ];
 
