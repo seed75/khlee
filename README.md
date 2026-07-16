@@ -14,35 +14,35 @@ The site is designed to give recruiters and engineering teams a fast read on my 
 
 ## Selected Projects
 
-### Subscription Cost Manager
+### Leakly
 
-A personal finance MVP concept for tracking subscriptions, recurring bills, free trials, cancellation notes, and potential savings.
-
-My focus:
-
-- Narrowed the product from a broad finance app into a focused subscription-management MVP.
-- Defined target users, first-screen information, free/paid plan logic, validation questions, and core data structure.
-- Planned a build path that avoids over-scoping sensitive financial integrations too early.
-
-### AI Interview Portfolio
-
-This portfolio itself: a hiring surface for Australian junior frontend, full-stack, and AI developer applications.
+A subscription and recurring-payment tracker that shows exactly what's about to auto-charge this month, before it happens.
 
 My focus:
 
-- Built a reusable project data model that powers the homepage, resume page, and Remotion reel.
-- Designed a bold responsive interface that avoids the usual static portfolio template feel.
-- Verified the app with linting and production build checks.
+- Scoped a focused MVP (manual entry, monthly totals, a 7-day due-soon view, trial-end warnings, a spending calendar) instead of over-building bank/card integrations up front.
+- Shipped it as an installable, English/Korean, light/dark web app (PWA).
+- Extended the same codebase into a Capacitor-wrapped iOS build running in Xcode's Simulator, as a step toward the App Store.
 
-### Remotion Portfolio Reel
+### TailorCV (RezRush)
 
-A short React-based motion reel that turns project data into video-style portfolio content.
+An AI resume tool: paste a resume and a job description, get one tailored to that specific job back in seconds.
 
 My focus:
 
-- Used Remotion composition patterns with transitions, Lottie, motion blur, and Three.js visuals.
-- Kept website and reel content synced through the same portfolio data source.
-- Added CLI scripts for video rendering and still-frame export.
+- Built two independent flows on one data model — a fast paste-and-tailor path, and a "Build" mode that generates a resume from scratch for people without one ready.
+- Wired up Supabase auth, OpenAI/Groq-powered rewriting, resume/DOCX parsing, PDF export, and Stripe for a paid tier.
+- Kept the two flows additive so the core "paste it, tailor it" speed pitch never got slower for existing users.
+
+### Job Application Tracker
+
+A full-stack tracker built to solve a real problem from my own job search: losing track of where I'd applied and at what stage.
+
+My focus:
+
+- Built a Node/Express API over PostgreSQL with a Controller → Service → Repository split, rather than one flat routes file.
+- Added JWT + bcrypt auth and a status-history table, instead of just overwriting the current status on each change.
+- Covered the real user flows with Playwright end-to-end tests, not just unit-level pieces.
 
 ## Tech Stack
 
@@ -94,8 +94,6 @@ I am positioning this portfolio for:
 
 ## Next Improvements
 
-- Replace placeholder LinkedIn and email with final public contact details.
 - Add live deployment URL after Vercel deployment.
 - Add real project screenshots or short demo videos for each case study.
 - Add Lighthouse report results after deployment.
-- Expand the Subscription Cost Manager concept into a working MVP.
