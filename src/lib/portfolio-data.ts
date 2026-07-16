@@ -34,10 +34,10 @@ export const profile = {
     "Australia-based junior developer focused on sharp frontend craft, practical full-stack delivery, and AI-assisted product workflows.",
   intro:
     "I build expressive, responsive interfaces with React and Next.js, then connect them to clean data models, testing habits, and deployment-ready code.",
-  email: "kanghyeoklee@users.noreply.github.com",
+  email: "ed75hyeok@gmail.com",
   github: "https://github.com/seed75/khlee",
-  linkedin: "https://www.linkedin.com/",
-  location: "Australia / Remote",
+  linkedin: "https://www.linkedin.com/in/kanghyeoklee62/",
+  location: "Sydney, Australia",
   availability: "Open to junior frontend, full-stack, and AI developer roles",
 };
 
@@ -54,62 +54,62 @@ export const heroStats = [
 
 export const projects: Project[] = [
   {
-    id: "subscription-cost-manager",
-    name: "Subscription Cost Manager",
+    id: "leakly",
+    name: "Leakly",
     tagline:
-      "A personal finance MVP concept that helps users track subscriptions, recurring bills, free trials, and potential savings.",
-    role: "Product planning, MVP scope, UI information architecture",
-    period: "MVP concept",
+      "A subscription and recurring-payment tracker that shows exactly what's about to auto-charge this month, before it happens.",
+    role: "Solo product build — planning, UI, data model, iOS packaging",
+    period: "2026",
     impact:
-      "Turned a broad money-management idea into a focused subscription tracking product that can be built and validated quickly.",
+      "Took a common money-leak problem (forgotten subscriptions and trials) from a one-line idea to a working, installable app with a real feature set.",
     problem:
-      "Users often forget recurring payments and free trials because subscription details are spread across banking apps, emails, and memory.",
+      "Recurring charges and free trials are scattered across banking apps, inboxes, and memory, so people notice they're overpaying only after the money is already gone.",
     decision:
-      "Scoped the MVP around manual subscription entry, monthly totals, upcoming renewal dates, trial reminders, cancellation notes, and a simple paid-plan path.",
+      "Built a focused MVP around manual subscription entry, monthly totals, a 7-day due-soon view, trial-end warnings, and a spending calendar — deliberately left out bank/card linking and SMS scanning to ship something real instead of something ambitious-but-stalled. Later extended it into a Capacitor-wrapped iOS shell so it can run as an installable app, not just a browser tab.",
     result:
-      "Produced a build-ready product brief with target users, pricing logic, validation questions, launch phases, and core data structure.",
-    stack: ["Product UX", "MVP Planning", "Next.js", "TypeScript", "Local Storage"],
-    metrics: ["5-item MVP scope", "Free/paid model", "User validation script"],
+      "Shipped a working English/Korean, light/dark, installable web app (PWA) with home/subscriptions/calendar/settings screens, and a Capacitor iOS build that runs the same codebase in Xcode's Simulator as a step toward the App Store.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Capacitor (iOS)"],
+    metrics: ["4 core screens", "EN / KO i18n", "PWA + iOS wrapper"],
     accent: "#B9F227",
     secondaryAccent: "#2F6BFF",
   },
   {
-    id: "ai-interview-portfolio",
-    name: "AI Interview Portfolio",
+    id: "tailorcv",
+    name: "TailorCV (RezRush)",
     tagline:
-      "A job-focused personal portfolio designed for Australian junior frontend, full-stack, and AI developer applications.",
-    role: "Frontend design, Next.js implementation, content modelling",
+      "An AI resume tool: paste a resume and a job description, get one tailored to that specific job back in seconds.",
+    role: "Solo full-stack build — AI integration, auth, payments, PDF export",
     period: "2026",
     impact:
-      "Built a dynamic hiring surface that explains projects through challenge, contribution, outcome, skills, resume, and contact flows.",
+      "Replaced the manual, repetitive job-application step of rewriting a resume for every posting with a single AI-assisted pass.",
     problem:
-      "A generic portfolio can look attractive but still fail recruiters if it does not quickly communicate role fit, project ownership, and technical evidence.",
+      "Tailoring a resume to each job posting is repetitive and easy to skip under time pressure, which quietly hurts application quality.",
     decision:
-      "Created a reusable project data model powering the homepage, printable resume route, and Remotion reel, with bold motion and responsive visual hierarchy.",
+      "Built two flows on one data model: a fast \"paste and tailor\" path for people who already have a resume, and a \"Build\" mode that generates a complete resume from just a name and a background description for people who don't — rendered into a small set of visual templates rather than one fixed layout.",
     result:
-      "Shipped a Next.js 16 portfolio with a printable resume page, interactive sections, verified production build, and GitHub deployment-ready source.",
-    stack: ["Next.js 16", "React 19", "TypeScript", "Motion", "Tailwind CSS"],
-    metrics: ["2 app routes", "Responsive UI", "Build verified"],
+      "Shipped an end-to-end product: Supabase-authenticated accounts, OpenAI/Groq-powered rewriting, resume/DOCX parsing on the way in, PDF export on the way out, and Stripe wired up for a paid tier.",
+    stack: ["Next.js", "TypeScript", "OpenAI", "Supabase", "Stripe"],
+    metrics: ["2 independent flows", "PDF + DOCX I/O", "AI rewrite in ~10s"],
     accent: "#FF6B57",
     secondaryAccent: "#FF4FD8",
   },
   {
-    id: "remotion-portfolio-reel",
-    name: "Remotion Portfolio Reel",
+    id: "job-application-tracker",
+    name: "Job Application Tracker",
     tagline:
-      "A React-based motion reel that turns portfolio project data into a short video-style hiring pitch.",
-    role: "Remotion composition, animation system, render pipeline",
+      "A full-stack tracker built to solve a real problem I had while job hunting: losing track of where I'd applied and at what stage.",
+    role: "Solo full-stack build — API, auth, database, E2E tests",
     period: "2026",
     impact:
-      "Added a memorable video layer to the portfolio so recruiters can scan technical range before reading the full case studies.",
+      "Replaced a messy spreadsheet with a proper layered application: real auth, a real database, and a dashboard that answers \"where do things stand\" at a glance.",
     problem:
-      "Static portfolio pages can miss the energy and storytelling needed to stand out in a crowded junior developer applicant pool.",
+      "Applying to many companies at once makes it easy to lose track of which stage each application is at, and a flat spreadsheet doesn't hold status history or answer \"what changed and when.\"",
     decision:
-      "Used Remotion Player, Renderer, Transitions, Motion Blur, Lottie, and Three.js from a shared project data source.",
+      "Built a Node/Express API over PostgreSQL with a Controller → Service → Repository split (rather than one flat routes file) so auth, business rules, and data access stay separately testable, with JWT + bcrypt auth and a status-history table instead of just overwriting the current status.",
     result:
-      "Created an embedded reel, CLI render script, and still-frame export path while keeping the content synced with the website.",
-    stack: ["Remotion", "Renderer", "Player", "Transitions", "Lottie", "Three.js"],
-    metrics: ["7-second reel", "Single data source", "MP4-ready pipeline"],
+      "Shipped a working app — register/login, full CRUD on applications, status filtering (Wishlist through Rejected), a dashboard summary, and Playwright end-to-end tests covering the real user flows, not just unit-level pieces.",
+    stack: ["Node.js", "Express", "PostgreSQL", "React", "Playwright"],
+    metrics: ["Layered API architecture", "JWT + bcrypt auth", "Playwright E2E coverage"],
     accent: "#2F6BFF",
     secondaryAccent: "#B9F227",
   },
