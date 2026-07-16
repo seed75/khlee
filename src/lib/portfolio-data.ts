@@ -44,7 +44,7 @@ export const profile = {
 export const heroStats = [
   { value: "Junior FE", label: "target role" },
   { value: "AI-ready", label: "product mindset" },
-  { value: "3 Projects", label: "case studies" },
+  { value: "4 Projects", label: "case studies" },
   { value: "Australia", label: "job market" },
   { value: "Next.js 16", label: "app router" },
   { value: "Remotion", label: "motion reel" },
@@ -112,6 +112,26 @@ export const projects: Project[] = [
     metrics: ["Layered API architecture", "JWT + bcrypt auth", "Playwright E2E coverage"],
     accent: "#2F6BFF",
     secondaryAccent: "#B9F227",
+  },
+  {
+    id: "even-and-mark",
+    name: "Even & Mark",
+    tagline:
+      "A redesign concept for a Melbourne event and marketing agency, staged as a single conference day from 08:00 to 17:30.",
+    role: "Solo frontend build — concept, motion design, no-framework implementation",
+    period: "2026",
+    impact:
+      "Turned a generic agency-site brief into a distinctive, storytelling-led frontend, built entirely in vanilla HTML/CSS/JS with zero dependencies.",
+    problem:
+      "Agency and PCO websites tend to default to the same stock layout — hero, services grid, contact form — which does little to communicate a company that runs live events for a living.",
+    decision:
+      "Staged the whole page as one run-sheet: a split-flap header clock ticks from 08:00 to 17:30 as you scroll, the background light shifts from morning to golden hour to night in sync with it, and every section carries a timecode instead of a generic label — with all motion respecting prefers-reduced-motion.",
+    result:
+      "Shipped a fully static, dependency-free site (plain HTML/CSS/JS, no build step) with a working split-flap clock, synced lighting transitions, and a hover interaction that cuts the lights on the hero wordmark.",
+    stack: ["HTML", "CSS", "JavaScript", "Motion Design"],
+    metrics: ["Zero dependencies", "prefers-reduced-motion support", "Custom split-flap clock"],
+    accent: "#FFC145",
+    secondaryAccent: "#2F6BFF",
   },
 ];
 
