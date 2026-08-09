@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://github.com/seed75"),
   title: "Kanghyeok Lee | Junior Frontend, Full-stack & AI Developer",
   description:
-    "Australia-focused personal portfolio for junior frontend, full-stack, and AI developer roles, with selected projects, skills, resume, and contact information.",
+    "My portfolio as a Sydney-based junior developer building React, Next.js, full-stack, and practical AI projects.",
   openGraph: {
     title: "Kanghyeok Lee | Junior Frontend, Full-stack & AI Developer",
     description:
-      "Selected projects, skills, resume, and hire-ready frontend, full-stack, and AI development evidence.",
+      "Projects I built, the choices I made, and the tools I use as a junior frontend, full-stack, and AI developer.",
     images: ["/images/portfolio-command-center.png"],
   },
 };

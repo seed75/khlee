@@ -32,9 +32,9 @@ export const profile = {
   name: "Kanghyeok Lee",
   role: "Junior Frontend / Full-stack / AI Developer",
   headline:
-    "I build things that stop money and bugs from quietly leaking out.",
+    "I am a Sydney-based junior developer who likes turning small, annoying problems into working products.",
   intro:
-    "React and Next.js by day, obsessive bug-hunter by night. I shipped an app called Leakly to stop subscription leaks; turns out I'm just as allergic to leaky code.",
+    "Most of my projects start from something I actually felt: forgotten subscriptions, messy job applications, repetitive resume edits, or boring websites. I usually build the first useful version quickly, then tighten the UI, data flow, and edge cases until it feels like something I would use myself.",
   email: "ed75hyeok@gmail.com",
   github: "https://github.com/seed75",
   siteUrl: "https://khlee-dusky.vercel.app",
@@ -44,13 +44,13 @@ export const profile = {
 };
 
 export const heroStats = [
-  { value: "Junior FE", label: "target role" },
-  { value: "AI-ready", label: "product mindset" },
-  { value: "4 Projects", label: "case studies" },
-  { value: "Australia", label: "job market" },
+  { value: "Junior Dev", label: "target role" },
+  { value: "Sydney", label: "based in" },
+  { value: "4 Builds", label: "shipped work" },
   { value: "Next.js 16", label: "app router" },
   { value: "TypeScript", label: "daily stack" },
-  { value: "Build OK", label: "verified" },
+  { value: "AI APIs", label: "integration work" },
+  { value: "E2E tests", label: "quality habit" },
 ];
 
 export const projects: Project[] = [
@@ -59,16 +59,16 @@ export const projects: Project[] = [
     name: "Leakly",
     tagline:
       "A subscription and recurring-payment tracker that shows exactly what's about to auto-charge this month, before it happens.",
-    role: "Solo product build — planning, UI, data model, iOS packaging",
+    role: "Solo product build, planning, UI, data model, iOS packaging",
     period: "2026",
     impact:
-      "Took a common money-leak problem (forgotten subscriptions and trials) from a one-line idea to a working, installable app with a real feature set.",
+      "I built Leakly because subscriptions are easy to forget until the money is already gone.",
     problem:
-      "Recurring charges and free trials are scattered across banking apps, inboxes, and memory, so people notice they're overpaying only after the money is already gone.",
+      "The problem felt simple but familiar: recurring charges and free trials are scattered across banking apps, inboxes, and memory.",
     decision:
-      "Built a focused MVP around manual subscription entry, monthly totals, a 7-day due-soon view, trial-end warnings, and a spending calendar — deliberately left out bank/card linking and SMS scanning to ship something real instead of something ambitious-but-stalled. Later extended it into a Capacitor-wrapped iOS shell so it can run as an installable app, not just a browser tab.",
+      "I kept the first version manual on purpose: subscription entry, monthly totals, a 7-day due-soon view, trial warnings, and a spending calendar. I left out bank/card linking because I wanted a version I could actually ship, test, and explain before adding privacy-heavy integrations. After that, I wrapped the same app with Capacitor for iOS.",
     result:
-      "Shipped a working English/Korean, light/dark, installable web app (PWA) with home/subscriptions/calendar/settings screens, and a Capacitor iOS build that runs the same codebase in Xcode's Simulator as a step toward the App Store.",
+      "The result is a working English/Korean, light/dark, installable PWA with home, subscriptions, calendar, and settings screens, plus an iOS build running in Xcode Simulator.",
     stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Capacitor (iOS)"],
     metrics: ["4 core screens", "EN / KO i18n", "PWA + iOS wrapper"],
     accent: "#B9F227",
@@ -80,16 +80,16 @@ export const projects: Project[] = [
     name: "TailorCV (RezRush)",
     tagline:
       "An AI resume tool: paste a resume and a job description, get one tailored to that specific job back in seconds.",
-    role: "Solo full-stack build — AI integration, auth, payments, PDF export",
+    role: "Solo full-stack build, AI integration, auth, payments, PDF export",
     period: "2026",
     impact:
-      "Replaced the manual, repetitive job-application step of rewriting a resume for every posting with a single AI-assisted pass.",
+      "I built this because rewriting a resume for every job is useful, but repetitive enough that people skip it.",
     problem:
-      "Tailoring a resume to each job posting is repetitive and easy to skip under time pressure, which quietly hurts application quality.",
+      "During a busy job search, tailoring each resume takes time and mental energy. I wanted the tool to do the first structured pass, not pretend to replace the applicant.",
     decision:
-      "Built two flows on one data model: a fast \"paste and tailor\" path for people who already have a resume, and a \"Build\" mode that generates a complete resume from just a name and a background description for people who don't — rendered into a small set of visual templates rather than one fixed layout.",
+      "I built two flows on one data model: a fast \"paste and tailor\" path for people who already have a resume, and a \"Build\" mode for people starting from a background description. I also added templates because the output should feel usable, not like raw AI text pasted into a box.",
     result:
-      "Shipped an end-to-end product: Supabase-authenticated accounts, OpenAI/Groq-powered rewriting, resume/DOCX parsing on the way in, PDF export on the way out, and Stripe wired up for a paid tier.",
+      "I shipped accounts with Supabase, OpenAI/Groq-powered rewriting, resume/DOCX parsing, PDF export, and Stripe wiring for a paid tier.",
     stack: ["Next.js", "TypeScript", "OpenAI", "Supabase", "Stripe"],
     metrics: ["2 independent flows", "PDF + DOCX I/O", "AI rewrite in ~10s"],
     accent: "#FF6B57",
@@ -101,16 +101,16 @@ export const projects: Project[] = [
     name: "Job Application Tracker",
     tagline:
       "A full-stack tracker built to solve a real problem I had while job hunting: losing track of where I'd applied and at what stage.",
-    role: "Solo full-stack build — API, auth, database, E2E tests",
+    role: "Solo full-stack build, API, auth, database, E2E tests",
     period: "2026",
     impact:
-      "Replaced a messy spreadsheet with a proper layered application: real auth, a real database, and a dashboard that answers \"where do things stand\" at a glance.",
+      "I built this after feeling how quickly job applications become hard to track in a spreadsheet.",
     problem:
-      "Applying to many companies at once makes it easy to lose track of which stage each application is at, and a flat spreadsheet doesn't hold status history or answer \"what changed and when.\"",
+      "When I was applying to many companies at once, I wanted more than a list of company names. I wanted stages, history, and a quick answer to \"what changed?\"",
     decision:
-      "Built a Node/Express API over PostgreSQL with a Controller → Service → Repository split (rather than one flat routes file) so auth, business rules, and data access stay separately testable, with JWT + bcrypt auth and a status-history table instead of just overwriting the current status.",
+      "I built a Node/Express API over PostgreSQL with Controller, Service, and Repository layers instead of one flat routes file. I added JWT + bcrypt auth and a status-history table so changes are recorded instead of just overwritten.",
     result:
-      "Shipped a working app — register/login, full CRUD on applications, status filtering (Wishlist through Rejected), a dashboard summary, and Playwright end-to-end tests covering the real user flows, not just unit-level pieces.",
+      "I shipped register/login, CRUD on applications, status filtering from Wishlist through Rejected, a dashboard summary, and Playwright tests for the main flows.",
     stack: ["Node.js", "Express", "PostgreSQL", "React", "Playwright"],
     metrics: ["Layered API architecture", "JWT + bcrypt auth", "Playwright E2E coverage"],
     accent: "#2F6BFF",
@@ -122,16 +122,16 @@ export const projects: Project[] = [
     name: "Even & Mark",
     tagline:
       "A redesign concept for a Melbourne event and marketing agency, staged as a single conference day from 08:00 to 17:30.",
-    role: "Solo frontend build — concept, motion design, no-framework implementation",
+    role: "Solo frontend build, concept, motion design, no-framework implementation",
     period: "2026",
     impact:
-      "Turned a generic agency-site brief into a distinctive, storytelling-led frontend, built entirely in vanilla HTML/CSS/JS with zero dependencies.",
+      "I built this to push the visual side harder without hiding behind a framework.",
     problem:
-      "Agency and PCO websites tend to default to the same stock layout — hero, services grid, contact form — which does little to communicate a company that runs live events for a living.",
+      "A lot of agency sites feel interchangeable: hero, services grid, contact form. For an events company, I wanted the page itself to feel more like an event.",
     decision:
-      "Staged the whole page as one run-sheet: a split-flap header clock ticks from 08:00 to 17:30 as you scroll, the background light shifts from morning to golden hour to night in sync with it, and every section carries a timecode instead of a generic label — with all motion respecting prefers-reduced-motion.",
+      "I staged the page as a run-sheet. A split-flap header clock moves from 08:00 to 17:30 as you scroll, the background light changes through the day, and the sections use timecodes instead of generic labels. I also added reduced-motion support.",
     result:
-      "Shipped a fully static, dependency-free site (plain HTML/CSS/JS, no build step) with a working split-flap clock, synced lighting transitions, and a hover interaction that cuts the lights on the hero wordmark.",
+      "I shipped a static, dependency-free site with a working split-flap clock, synced lighting transitions, and a hover interaction that cuts the lights on the hero wordmark.",
     stack: ["HTML", "CSS", "JavaScript", "Motion Design"],
     metrics: ["Zero dependencies", "prefers-reduced-motion support", "Custom split-flap clock"],
     accent: "#FFC145",
@@ -143,30 +143,30 @@ export const projects: Project[] = [
 export const labs: LabItem[] = [
   {
     name: "UI Implementation",
-    signal: "pixel to product",
+    signal: "responsive screens",
     detail:
-      "I translate visual ideas into responsive components with clear states, accessible markup, and polished interaction details.",
+      "I like screens that have a point of view, but I still check the practical bits: mobile layout, empty states, hover states, and readable content.",
     accent: "#B9F227",
   },
   {
     name: "Frontend Architecture",
-    signal: "clean structure",
+    signal: "clear structure",
     detail:
-      "I separate content models, component responsibilities, routes, and reusable UI patterns so projects stay easy to change.",
+      "I try to keep data, routes, and UI components separate enough that I can come back later and change things without fighting my own code.",
     accent: "#FF4FD8",
   },
   {
-    name: "AI Product Thinking",
-    signal: "useful AI, not hype",
+    name: "AI Integration",
+    signal: "practical use cases",
     detail:
-      "I frame AI features around user value, workflow speed, and measurable outcomes before adding complexity.",
+      "I use AI where it fits the workflow, like rewriting or generation, and avoid adding it just because it sounds impressive.",
     accent: "#FF6B57",
   },
   {
     name: "Quality Habit",
-    signal: "tested and measured",
+    signal: "check the flow",
     detail:
-      "I use TypeScript, linting, production builds, browser checks, accessibility basics, and performance awareness before shipping.",
+      "I am still junior, so I lean on checks: TypeScript, linting, production builds, and browser tests before I call a project done.",
     accent: "#2F6BFF",
   },
 ];
@@ -174,23 +174,23 @@ export const labs: LabItem[] = [
 export const timeline: ExperienceItem[] = [
   {
     step: "01",
-    label: "Junior Frontend Candidate",
-    detail: "Focused on React, Next.js, TypeScript, modern CSS, motion, and responsive UI implementation.",
+    label: "I start from the screen",
+    detail: "I care about how the product feels first: layout, hierarchy, responsiveness, and whether the user can understand it quickly.",
   },
   {
     step: "02",
-    label: "Full-stack Learner",
-    detail: "Comfortable connecting UI to routes, data models, API thinking, deployment flow, and product constraints.",
+    label: "Then I make it real",
+    detail: "I connect the UI to auth, databases, API routes, file parsing, payments, and deployment constraints when the product needs it.",
   },
   {
     step: "03",
-    label: "AI Developer Direction",
-    detail: "Interested in AI-assisted products, prompt-driven workflows, automation, and practical user-facing AI tools.",
+    label: "I use AI as a feature",
+    detail: "For me, AI is useful when it removes repetitive work or creates a better first draft, not when it is just a label on the homepage.",
   },
   {
     step: "04",
-    label: "Ready to Interview",
-    detail: "Prepared to discuss each project through problem definition, technical choices, trade-offs, and next steps.",
+    label: "I explain my trade-offs",
+    detail: "Most projects here are solo builds, so I can talk through what I chose, what I skipped, and what I would improve next.",
   },
 ];
 

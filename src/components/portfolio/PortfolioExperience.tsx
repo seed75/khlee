@@ -29,7 +29,7 @@ import {
 const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
+  { label: "Approach", href: "#approach" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -129,7 +129,7 @@ function Hero() {
     <section id="top" className="relative min-h-[92svh] overflow-hidden pt-16">
       <Image
         src="/images/portfolio-command-center.png"
-        alt="A cinematic developer command center with code, architecture panels, and video timelines"
+        alt="A developer workspace with code, project notes, and interface panels"
         fill
         priority
         sizes="100vw"
@@ -149,11 +149,11 @@ function Hero() {
         >
           <div className="mb-5 inline-flex items-center gap-2 border border-lime-300/50 bg-black/42 px-3 py-2 text-sm font-semibold text-lime-200 backdrop-blur">
             <Radio size={16} />
-            OPEN TO JUNIOR FRONTEND / FULL-STACK / AI ROLES
+            SYDNEY · OPEN TO JUNIOR FRONTEND / FULL-STACK / AI ROLES
           </div>
           <h1 className="max-w-5xl text-5xl font-black leading-[0.96] text-white sm:text-6xl md:text-7xl lg:text-8xl">
             {profile.name}.
-            <span className="block text-lime-300">Frontend + AI Developer.</span>
+            <span className="block text-lime-300">Frontend Developer.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/76 sm:text-xl">
             {profile.headline} {profile.intro}
@@ -194,8 +194,8 @@ function Hero() {
           <div className="relative z-10 flex h-full flex-col justify-between p-6">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm font-bold text-white/62">HIRING SIGNALS</p>
-                <p className="mt-2 text-3xl font-black text-white">Why hire Kang?</p>
+                <p className="text-sm font-bold text-white/62">CURRENT FOCUS</p>
+                <p className="mt-2 text-3xl font-black text-white">What I work on</p>
               </div>
               <Sparkles className="text-lime-300" size={28} />
             </div>
@@ -219,7 +219,7 @@ function Hero() {
               ))}
             </div>
             <div className="grid grid-cols-3 gap-3">
-              {["UI", "Code", "Ship"].map((item) => (
+              {["Plan", "Build", "Test"].map((item) => (
                 <div
                   key={item}
                   className="border border-white/12 bg-black/40 px-3 py-4 text-center text-sm font-bold text-white/76"
@@ -279,14 +279,14 @@ function Projects({
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="mb-4 flex items-center gap-2 text-sm font-bold text-coral">
             <Boxes size={18} />
-            CASE STUDIES
+            PROJECTS
           </div>
           <h2 className="max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
-            Selected projects for junior developer hiring.
+            Projects I can talk through in detail.
           </h2>
           <p className="mt-5 text-base leading-7 text-white/64">
-            Each case study is structured around ownership: the problem, my contribution,
-            the technical decisions, and the outcome a hiring team can evaluate quickly.
+            These are small, complete builds rather than mock sections. I have kept the
+            notes focused on the problem, the choices I made, and what actually shipped.
           </p>
         </div>
 
@@ -422,12 +422,12 @@ function SkillsSection() {
               SKILLS
             </div>
             <h2 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
-              Strengths that matter in a junior developer portfolio.
+              Skills I use across my projects.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-white/60">
-            The skills are framed around how I can contribute on a team, not just the
-            names of tools I have used.
+            Most of my work sits around React and Next.js, with enough backend and AI
+            integration work to build full product flows end to end.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -466,7 +466,7 @@ function StackSection() {
             STACK
           </div>
           <h2 className="text-4xl font-black leading-tight text-white sm:text-5xl">
-            A stack built for frontend, full-stack, and AI product work.
+            Tools I have been using recently.
           </h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
@@ -494,16 +494,16 @@ function StackSection() {
 
 function ExperienceSection() {
   return (
-    <section id="experience" className="border-b border-white/10 py-24">
+    <section id="approach" className="border-b border-white/10 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
             <div className="mb-4 flex items-center gap-2 text-sm font-bold text-lime-300">
               <Sparkles size={18} />
-              EXPERIENCE
+              APPROACH
             </div>
             <h2 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
-              A clear growth story for interviews.
+              How I work through a build.
             </h2>
           </div>
         </div>
@@ -532,7 +532,7 @@ function ContactSection() {
         <div>
           <p className="mb-4 text-sm font-black text-cobalt">CONTACT</p>
           <h2 className="max-w-4xl text-4xl font-black leading-tight sm:text-6xl">
-            Ready to talk about junior frontend, full-stack, and AI developer roles in Australia.
+            Open to junior frontend, full-stack, and AI developer roles in Sydney or remote across Australia.
           </h2>
         </div>
         <div className="grid content-end gap-3">

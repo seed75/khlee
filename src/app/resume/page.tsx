@@ -6,7 +6,7 @@ import { PrintButton } from "./PrintButton";
 export const metadata = {
   title: "Resume | Kanghyeok Lee",
   description:
-    "Resume page for Kanghyeok Lee, a junior frontend, full-stack, and AI developer targeting roles in Australia.",
+    "Resume page for Kanghyeok Lee, a Sydney-based junior frontend, full-stack, and AI developer.",
 };
 
 export default function ResumePage() {
@@ -66,7 +66,7 @@ export default function ResumePage() {
           </header>
 
           <section className="grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr]">
-            <h2 className="text-xl font-black">Hiring Summary</h2>
+            <h2 className="text-xl font-black">Profile</h2>
             <div className="grid gap-3">
               {timeline.map((item) => (
                 <div key={item.step} className="grid gap-1">
