@@ -7,7 +7,6 @@ import {
   Boxes,
   Braces,
   Download,
-  Film,
   GitBranch,
   Layers3,
   Mail,
@@ -26,13 +25,11 @@ import {
   stackGroups,
   timeline,
 } from "@/lib/portfolio-data";
-import { ReelPlayer } from "./ReelPlayer";
 
 const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Reel", href: "#reel" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -78,7 +75,6 @@ export function PortfolioExperience() {
       <SkillsSection />
       <StackSection />
       <ExperienceSection />
-      <ReelSection />
       <ContactSection />
     </main>
   );
@@ -404,48 +400,6 @@ function EvidenceLine({ label, value }: { label: string; value: string }) {
       <span className="font-mono text-xs font-bold text-white/42">{label}</span>
       <p className="text-sm leading-6 text-white/70">{value}</p>
     </div>
-  );
-}
-
-function ReelSection() {
-  return (
-    <motion.section
-      id="reel"
-      variants={sectionVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-120px" }}
-      transition={{ duration: 0.7 }}
-      className="relative overflow-hidden border-b border-white/10 bg-[#101114] py-24"
-    >
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,107,87,0.14),transparent_30%,rgba(47,107,255,0.2)_70%,rgba(185,242,39,0.1))]" />
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
-        <div className="relative z-10">
-          <div className="mb-4 flex items-center gap-2 text-sm font-bold text-lime-300">
-            <Film size={18} />
-            REMOTION REEL
-          </div>
-          <h2 className="max-w-xl text-4xl font-black leading-tight text-white sm:text-5xl">
-            A short motion reel for fast recruiter scanning.
-          </h2>
-          <p className="mt-5 text-base leading-7 text-white/68">
-            The Remotion reel gives recruiters a quick read on my project range, animation
-            taste, and ability to turn React components into video-ready content.
-          </p>
-          <div className="mt-7 grid gap-3 sm:grid-cols-3">
-            {["Player", "Renderer", "Transitions"].map((item) => (
-              <div key={item} className="border border-white/12 bg-black/30 px-4 py-4">
-                <p className="font-mono text-sm font-black text-white">{item}</p>
-                <p className="mt-1 text-xs text-white/52">wired</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="relative z-10">
-          <ReelPlayer />
-        </div>
-      </div>
-    </motion.section>
   );
 }
 

@@ -9,7 +9,6 @@ The site is designed to give recruiters and engineering teams a fast read on my 
 - Dynamic personal portfolio built with Next.js 16, React 19, TypeScript, Tailwind CSS, and Motion.
 - Selected project case studies written around challenge, contribution, and outcome.
 - Printable resume route at `/resume`.
-- Embedded Remotion reel using Player, Renderer, Transitions, Motion Blur, Lottie, and Three.js.
 - Responsive, high-energy visual design with verified production build.
 
 ## Selected Projects
@@ -47,7 +46,6 @@ My focus:
 ## Tech Stack
 
 - Frontend: Next.js 16, React 19, TypeScript, Tailwind CSS, Motion, lucide-react
-- Video: Remotion, Remotion Player, Renderer, Transitions, Motion Blur, Lottie, Three.js
 - Quality: ESLint, TypeScript, Playwright checks, production build verification
 - Product direction: junior frontend, full-stack fundamentals, AI-assisted workflows
 
@@ -66,9 +64,6 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run dev
 npm run lint
 npm run build
-npm run remotion:studio
-npm run remotion:render
-npm run remotion:still
 ```
 
 ## Project Structure
@@ -78,7 +73,6 @@ src/app/                  Next.js App Router pages
 src/app/resume/           Printable resume route
 src/components/portfolio/ Interactive portfolio UI
 src/lib/portfolio-data.ts Shared profile, skills, and project data
-src/remotion/             Remotion composition and video assets
 public/images/            Generated visuals and preview images
 scripts/                  Rendering helpers
 ```

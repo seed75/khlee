@@ -49,7 +49,6 @@ export const heroStats = [
   { value: "4 Projects", label: "case studies" },
   { value: "Australia", label: "job market" },
   { value: "Next.js 16", label: "app router" },
-  { value: "Remotion", label: "motion reel" },
   { value: "TypeScript", label: "daily stack" },
   { value: "Build OK", label: "verified" },
 ];
