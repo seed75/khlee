@@ -6,7 +6,7 @@ import { PrintButton } from "./PrintButton";
 export const metadata = {
   title: "Resume | Kanghyeok Lee",
   description:
-    "Resume page for Kanghyeok Lee, a Sydney-based junior frontend, full-stack, and AI developer.",
+    "My resume as a Sydney-based junior frontend, full-stack, and AI developer.",
 };
 
 export default function ResumePage() {
@@ -18,7 +18,7 @@ export default function ResumePage() {
             href="/"
             className="border border-black px-4 py-2 text-sm font-black transition hover:bg-black hover:text-white"
           >
-            Back to portfolio
+            Back to my portfolio
           </Link>
           <PrintButton />
         </div>
@@ -56,7 +56,7 @@ export default function ResumePage() {
                 className="inline-flex items-center gap-2 border border-black px-3 py-2 transition hover:bg-black hover:text-white"
               >
                 <Globe size={15} />
-                Portfolio
+                My Portfolio
               </a>
               <span className="inline-flex items-center gap-2 border border-black px-3 py-2">
                 <MapPin size={15} />
@@ -66,7 +66,7 @@ export default function ResumePage() {
           </header>
 
           <section className="grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr]">
-            <h2 className="text-xl font-black">Profile</h2>
+            <h2 className="text-xl font-black">My Profile</h2>
             <div className="grid gap-3">
               {timeline.map((item) => (
                 <div key={item.step} className="grid gap-1">
@@ -78,7 +78,7 @@ export default function ResumePage() {
           </section>
 
           <section className="grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr]">
-            <h2 className="text-xl font-black">Selected Projects</h2>
+            <h2 className="text-xl font-black">Projects I Built</h2>
             <div className="grid gap-5">
               {projects.map((project) => (
                 <div key={project.id}>
@@ -104,7 +104,7 @@ export default function ResumePage() {
           </section>
 
           <section className="grid gap-8 py-7 md:grid-cols-[0.72fr_1.28fr]">
-            <h2 className="text-xl font-black">Skills</h2>
+            <h2 className="text-xl font-black">Tools I Use</h2>
             <div className="grid gap-4 sm:grid-cols-3">
               {stackGroups.map((group) => (
                 <div key={group.title} className="border border-black p-4">
