@@ -177,3 +177,112 @@ button {
     scroll-snap-align: start;
   }
 }
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff !important;
+    color: #101114 !important;
+    overflow: visible !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .resume-print-root {
+    min-height: auto !important;
+    background: #ffffff !important;
+  }
+
+  .resume-print-shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-print-card {
+    width: 100% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .resume-print-header {
+    break-after: avoid;
+    padding-bottom: 8mm !important;
+  }
+
+  .resume-print-name {
+    margin-top: 3mm !important;
+    font-size: 38pt !important;
+    line-height: 0.95 !important;
+  }
+
+  .resume-print-summary {
+    max-width: none !important;
+    margin-top: 4mm !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .resume-print-contact {
+    gap: 2.4mm !important;
+    margin-top: 4mm !important;
+    font-size: 8.5pt !important;
+  }
+
+  .resume-print-contact a,
+  .resume-print-contact span {
+    padding: 1.8mm 2.4mm !important;
+  }
+
+  .resume-print-section {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 4mm !important;
+    padding-top: 7mm !important;
+    padding-bottom: 7mm !important;
+    break-inside: auto;
+  }
+
+  .resume-print-section h2 {
+    padding-bottom: 2mm !important;
+    border-bottom: 1px solid rgba(16, 17, 20, 0.22) !important;
+    font-size: 13pt !important;
+    line-height: 1.1 !important;
+  }
+
+  .resume-print-item,
+  .resume-print-project,
+  .resume-print-stack {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resume-print-project {
+    margin-bottom: 4mm !important;
+  }
+
+  .resume-print-project p,
+  .resume-print-item p,
+  .resume-print-stack li {
+    font-size: 8.7pt !important;
+    line-height: 1.42 !important;
+  }
+
+  .resume-print-project h3 {
+    font-size: 12pt !important;
+    line-height: 1.15 !important;
+  }
+
+  .resume-print-stack {
+    padding: 3.2mm !important;
+  }
+}

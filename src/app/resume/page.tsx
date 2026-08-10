@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function ResumePage() {
   return (
-    <main className="min-h-screen bg-[#f7f7ef] text-[#101114]">
-      <section className="mx-auto max-w-5xl px-5 py-8 sm:px-8 print:max-w-none print:px-10">
+    <main className="resume-print-root min-h-screen bg-[#f7f7ef] text-[#101114]">
+      <section className="resume-print-shell mx-auto max-w-5xl px-5 py-8 sm:px-8">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-3 print:hidden">
           <Link
             href="/"
@@ -23,16 +23,16 @@ export default function ResumePage() {
           <PrintButton />
         </div>
 
-        <article className="border border-black bg-white p-6 shadow-[12px_12px_0_#101114] print:border-0 print:shadow-none">
-          <header className="border-b-4 border-black pb-6">
+        <article className="resume-print-card border border-black bg-white p-6 shadow-[12px_12px_0_#101114]">
+          <header className="resume-print-header border-b-4 border-black pb-6">
             <p className="text-sm font-black uppercase text-[#2F6BFF]">{profile.role}</p>
-            <h1 className="mt-3 text-5xl font-black leading-none sm:text-7xl">
+            <h1 className="resume-print-name mt-3 text-5xl font-black leading-none sm:text-7xl">
               {profile.name}
             </h1>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-black/72">
+            <p className="resume-print-summary mt-4 max-w-3xl text-base leading-7 text-black/72">
               {profile.headline} {profile.intro}
             </p>
-            <div className="mt-5 flex flex-wrap gap-3 text-sm font-bold">
+            <div className="resume-print-contact mt-5 flex flex-wrap gap-3 text-sm font-bold">
               <a
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center gap-2 border border-black px-3 py-2 transition hover:bg-black hover:text-white"
@@ -65,11 +65,11 @@ export default function ResumePage() {
             </div>
           </header>
 
-          <section className="grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr]">
+          <section className="resume-print-section grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr] print:!grid-cols-1 print:!gap-4">
             <h2 className="text-xl font-black">My Profile</h2>
             <div className="grid gap-3">
               {timeline.map((item) => (
-                <div key={item.step} className="grid gap-1">
+                <div key={item.step} className="resume-print-item grid gap-1">
                   <p className="font-black">{item.label}</p>
                   <p className="text-sm leading-6 text-black/68">{item.detail}</p>
                 </div>
@@ -77,11 +77,11 @@ export default function ResumePage() {
             </div>
           </section>
 
-          <section className="grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr]">
+          <section className="resume-print-section grid gap-8 border-b border-black/20 py-7 md:grid-cols-[0.72fr_1.28fr] print:!grid-cols-1 print:!gap-4">
             <h2 className="text-xl font-black">Projects I Built</h2>
             <div className="grid gap-5">
               {projects.map((project) => (
-                <div key={project.id}>
+                <div key={project.id} className="resume-print-project">
                   <div className="flex flex-wrap items-center gap-2">
                     <h3 className="text-lg font-black">{project.name}</h3>
                     <span className="border border-black px-2 py-1 text-xs font-bold">
@@ -103,11 +103,11 @@ export default function ResumePage() {
             </div>
           </section>
 
-          <section className="grid gap-8 py-7 md:grid-cols-[0.72fr_1.28fr]">
+          <section className="resume-print-section grid gap-8 py-7 md:grid-cols-[0.72fr_1.28fr] print:!grid-cols-1 print:!gap-4">
             <h2 className="text-xl font-black">Tools I Use</h2>
             <div className="grid gap-4 sm:grid-cols-3">
               {stackGroups.map((group) => (
-                <div key={group.title} className="border border-black p-4">
+                <div key={group.title} className="resume-print-stack border border-black p-4">
                   <h3 className="font-black">{group.title}</h3>
                   <ul className="mt-3 grid gap-2 text-sm text-black/68">
                     {group.items.map((item) => (
