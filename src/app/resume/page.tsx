@@ -4,16 +4,17 @@ import { profile, projects, stackGroups, timeline } from "@/lib/portfolio-data";
 import { PrintButton } from "./PrintButton";
 
 export const metadata = {
-  title: "Resume | Kanghyeok Lee",
+  title: "Résumé",
   description:
-    "My resume as a Sydney-based junior frontend, full-stack, and AI developer.",
+    "My résumé as a Sydney-based junior frontend, full-stack, and AI developer.",
+  alternates: { canonical: "/resume" },
 };
 
 export default function ResumePage() {
   return (
     <main className="resume-print-root min-h-screen bg-[#f7f7ef] text-[#101114]">
       <section className="resume-print-shell mx-auto max-w-5xl px-5 py-8 sm:px-8">
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 print:hidden">
+        <div className="resume-toolbar mb-8 flex flex-wrap items-center justify-between gap-3 print:hidden">
           <Link
             href="/"
             className="border border-black px-4 py-2 text-sm font-black transition hover:bg-black hover:text-white"

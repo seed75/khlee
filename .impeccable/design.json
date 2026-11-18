@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T07:26:12Z",
+  "title": "Kanghyeok Lee's portfolio",
+  "extensions": {
+    "colorMeta": {
+      "indigo": { "role": "primary", "displayName": "Indigo" },
+      "paper": { "role": "neutral", "displayName": "Cool paper" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial display", "purpose": "Hero and headings" },
+      "body": { "displayName": "Reading text", "purpose": "Descriptions and navigation" }
+    },
+    "motion": [
+      { "name": "hover-transition", "value": "160ms ease", "purpose": "Link arrow and button hover feedback; disabled with reduced motion" }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "920px" },
+      { "name": "phone", "value": "600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Link",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action on a home or case-study page.",
+      "html": "<a class=\"folio-button\" href=\"#projects\">View work ↓</a>",
+      "css": ".folio-button { display: inline-flex; align-items: center; gap: 13px; min-height: 45px; padding: 9px 16px; box-sizing: border-box; background: #3225a9; color: #fff; font: 660 .9rem Geist, sans-serif; border-radius: 3px; text-decoration: none; } .folio-button:hover { background: #221980; } .folio-button:focus-visible { outline: 2px solid #3225a9; outline-offset: 5px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Show the software",
+    "overview": "An editorial portfolio for hiring teams that leads from real interfaces to specific project contributions and direct contact.",
+    "keyCharacteristics": ["Real project screenshots", "Strong type hierarchy", "Flat surfaces"],
+    "rules": [
+      { "name": "Evidence first", "body": "Give each project a real interface capture and a route to its case study.", "section": "layout" }
+    ],
+    "dos": ["Keep project outcomes specific and factual."],
+    "donts": ["Avoid decorative motion and fabricated product screens."]
+  }
+}
