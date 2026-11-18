@@ -21,7 +21,7 @@ import {
   heroStats,
   labs,
   profile,
-  projects,
+  portfolioProjects,
   stackGroups,
   timeline,
 } from "@/lib/portfolio-data";
@@ -39,10 +39,10 @@ const sectionVariants = {
 };
 
 export function PortfolioExperience() {
-  const [activeProject, setActiveProject] = useState(projects[0].id);
+  const [activeProject, setActiveProject] = useState(portfolioProjects[0].id);
 
   const selectedProject = useMemo(
-    () => projects.find((project) => project.id === activeProject) ?? projects[0],
+    () => portfolioProjects.find((project) => project.id === activeProject) ?? portfolioProjects[0],
     [activeProject],
   );
 
@@ -262,7 +262,7 @@ function Projects({
   selectedProject,
   setActiveProject,
 }: {
-  selectedProject: (typeof projects)[number];
+  selectedProject: (typeof portfolioProjects)[number];
   setActiveProject: (id: string) => void;
 }) {
   return (
@@ -291,7 +291,7 @@ function Projects({
         </div>
 
         <div className="grid gap-4">
-          {projects.map((project) => {
+          {portfolioProjects.map((project) => {
             const selected = project.id === selectedProject.id;
             return (
               <button

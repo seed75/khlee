@@ -43,16 +43,6 @@ export const profile = {
   availability: "Open to junior frontend, full-stack, and AI developer roles",
 };
 
-export const heroStats = [
-  { value: "Junior Dev", label: "target role" },
-  { value: "Sydney", label: "based in" },
-  { value: "4 Builds", label: "shipped work" },
-  { value: "Next.js 16", label: "app router" },
-  { value: "TypeScript", label: "daily stack" },
-  { value: "AI APIs", label: "integration work" },
-  { value: "E2E tests", label: "quality habit" },
-];
-
 export const projects: Project[] = [
   {
     id: "leakly",
@@ -138,6 +128,41 @@ export const projects: Project[] = [
     secondaryAccent: "#2F6BFF",
     liveUrl: "https://mark-even.vercel.app",
   },
+];
+
+export const portfolioProjects: Project[] = [
+  {
+    id: "incidentdesk",
+    name: "IncidentDesk",
+    tagline:
+      "An incident review workspace that turns customer reports into engineering handoffs with a recorded approval decision.",
+    role: "Solo full-stack build, incident workflow, Supabase integration, guest demo",
+    period: "2026",
+    impact:
+      "I built IncidentDesk so an engineering handoff carries the evidence and decision behind it.",
+    problem:
+      "When a customer report moves from support to engineering, the affected version, source evidence and review decision can get buried in chat threads.",
+    decision:
+      "I put the report, runbook evidence and handoff draft in one workspace. Reviewers approve a specific draft revision, and PostgreSQL records the decision and creates one follow-up in the same transaction.",
+    result:
+      "The guest demo opens a sample incident without an account and lets visitors review evidence, save a draft, approve it and inspect the activity history. Team accounts sign in through Supabase.",
+    stack: ["Next.js", "TypeScript", "Supabase Auth", "PostgreSQL", "Python"],
+    metrics: ["Versioned runbook evidence", "Human approval with audit history", "Interactive guest demo"],
+    accent: "#A59BFF",
+    secondaryAccent: "#65D6B4",
+    liveUrl: "https://incidentdesk-demo.vercel.app/demo",
+  },
+  ...projects,
+];
+
+export const heroStats = [
+  { value: "Junior Dev", label: "target role" },
+  { value: "Sydney", label: "based in" },
+  { value: `${portfolioProjects.length} Builds`, label: "shipped work" },
+  { value: "Next.js 16", label: "app router" },
+  { value: "TypeScript", label: "daily stack" },
+  { value: "AI APIs", label: "integration work" },
+  { value: "E2E tests", label: "quality habit" },
 ];
 
 export const labs: LabItem[] = [
