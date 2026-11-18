@@ -74,7 +74,7 @@ Use a 3px radius on primary actions and 12px on project frames. The email and su
 
 ## Components
 
-Project cards pair an unaltered interface capture with a category, named case-study link, and one-sentence explanation. The whole card opens the case study through a single link and tab stop. Case-study facts use a description list. Links use a 2px visible keyboard outline, with white in the indigo footer. Hover transitions last 160ms, and the site disables them when reduced motion is requested.
+Project cards pair an unaltered interface capture with a short role label, named case-study link, and one-sentence explanation. The whole card opens the case study through a single link and tab stop. Case-study facts use a description list. Links use a 2px visible keyboard outline, with white in the indigo footer. Hover transitions last 160ms, and the site disables them when reduced motion is requested.
 
 ## Do's and Don'ts
 

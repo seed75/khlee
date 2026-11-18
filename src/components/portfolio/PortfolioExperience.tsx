@@ -33,7 +33,7 @@ export function WorkGrid({ heading: Heading = "h3" }: { heading?: "h2" | "h3" })
             <ProjectImage project={project} featured={index === 0} />
           </div>
           <div className="project-copy">
-            <p className="project-category">{project.category}</p>
+            <p className="project-role">{project.cardRole}</p>
             <Heading>
               <Link href={`/work/${project.id}`}>
                 {project.name} <ArrowUpRight size={23} aria-hidden="true" />
